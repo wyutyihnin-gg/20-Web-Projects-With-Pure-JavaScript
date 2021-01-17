@@ -1,3 +1,39 @@
+function longestStr(str) {
+    str = str.split(" ");
+    let longestStr = str[0];
+
+    for (let i = 1; i < str.length; i++) {
+        if (str[i].length > longestStr) {
+            longestStr = str[i];
+        }
+    }
+    console.log(longestStr);
+}
+longestStr("searching longest string");
+
+//all fist char with captial
+function firstLetterCaptital(str) {
+    let strArr = [];
+    str = str.split(" ");
+    for (let i = 0; i < str.length; i++) {
+        strArr[i] = str[i].charAt(0).toUpperCase() + str[i].substring(1);
+
+    }
+    console.log(strArr.join(' '))
+}
+firstLetterCaptital("this is a function for first letting with captial");
+
+/**
+ * reverse a number
+ *split() method is used to split a String object
+ *sort() method is used to sort the elements of an array in place and returns the array.
+ *join() method is used to join all elements of an array into a string.
+ */
+function alphabeticalOrder(str) {
+    alert(str.split('').sort().join(''));
+}
+alphabeticalOrder('testing');
+
 //combination of a string
 function strCombine(str) {
     let strArr = [],
